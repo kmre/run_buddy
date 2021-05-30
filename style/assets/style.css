@@ -57,15 +57,20 @@ footer {
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   } 
     footer h2 {
-        display: inline;
+        /* Removing to add flexbox"
+        display: inline;*/
         color: #024e76;
         font-size: 30px;
         margin: 0;
     }
     footer div {
-        float: right;
+        /*Removing to add flexbox
+        float: right;*/
         line-height: 1.5;
         text-align: right;
     }  
@@ -79,22 +84,38 @@ section {
 /* Hero style start */      
 .hero {
     background-image: url("../images/hero-bg.jpg");
-    height: 600px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*Removing to add flexbox
     position: relative;
+    height: 600px;*/
 }
+
+form {
+    display: flex;  
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .hero-form {
 border: 3px solid #024e76;
 background-color: #fce138;
-padding: 20px;
-width: 500px;
 color: #024e76;
-position: absolute;
-bottom: 120px;
-right: 140px;
+padding: 20px;
+/*Modifies edges of box*/
 border-radius: 2%;
 box-shadow: 1px 1px 7px gray;
+/*Adding for flexbox*/
+width: 40%;
+margin: 3.5%;
+/*Removing to add flex-box
+width: 500px;
+position: absolute;
+bottom: 120px;
+right: 140px;*/
 }    
 .hero-form p {
     margin: 5px 0 15px 0;
@@ -106,11 +127,13 @@ box-shadow: 1px 1px 7px gray;
 .form-input {
     border: 1px solid #024e76;
     font-size: 18px;
-    margin: 8px;
+    margin: 8px 0 15px;
     color: #024e76;
-    display: block;
-    padding: 7px 15px;
-    margin-bottom: 15px;
+    /*Removed to add flexbox
+    display: block;*/
+    padding: 7px 5%;
+    /* margin-bottom: 15px;
+    margin-top: 8px; */
     border-radius: 10px;
 }
 .hero-form label {
@@ -119,20 +142,43 @@ box-shadow: 1px 1px 7px gray;
 .hero-form button {
     background-color: #024e76;
     color: #fce138;
-    display: block;
-    font-size: 18px;
+    /* display: block; */
     padding: 10px 20px;
     border: none;
+    width: 30%;
+    font-size: 1vw;
+    text-align: center;
 }
+/*Added for flexbox*/
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+}
+    .hero-cta h2 {
+        font-style: italic;
+        font-size: 55px;
+        color: #fce138;
+    }
+
+
 /* Hero style end */  
 /* General use sections */
 .section-title {
     font-size: 55px;
     color: #024e76;
     margin-bottom: 35px;
+    /*Removed for flex box
     padding: 0 100px 20px 100px;
     border-bottom: 3px solid;
-    display: inline-block;
+    display: inline-block; */
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
 .yellow-border {
     border-color: #fce138;
@@ -147,8 +193,9 @@ box-shadow: 1px 1px 7px gray;
     text-align: right;
 }
 /* End General Use section*/
-/* Intro Sections What we do */    
-.intro {
+/* Intro Sections What we do */
+/*Removed entire section for flexbox    
+ .intro {
     text-align: center;
 }
     .intro p {
@@ -157,10 +204,11 @@ box-shadow: 1px 1px 7px gray;
         width: 80%;
         font-size: 20px;
         margin: 0 auto;
-    }
+    } */
 /* Style for What you do*/
 .steps {
-    text-align: center;
+    /*Removed for flex box
+    text-align: center; */
     background: #fce138;
 }
     .steps div {
@@ -184,7 +232,8 @@ box-shadow: 1px 1px 7px gray;
     }
 /* Style for trainers */    
 .trainers {
-    text-align: center;
+    /*Removed for flexbox
+    text-align: center;*/
 }
     .trainer {
         width: 900px;
@@ -215,9 +264,13 @@ box-shadow: 1px 1px 7px gray;
                 font-size: 17px;
                 line-height: 1.3;
             }
+.flex-row {
+    display: flex;
+}
+
 /*Reach out section*/
  .contact {
-    text-align: center;
+    /*text-align: center;*/
     background-color: #024e76;
 }
     .contact h2 {
